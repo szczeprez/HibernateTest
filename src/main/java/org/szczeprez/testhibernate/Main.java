@@ -1,19 +1,16 @@
 package org.szczeprez.testhibernate;
-
-import java.math.BigDecimal;
-
+ 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
-import org.szczeprez.testhibernate.domain.Employee;
-import org.szczeprez.testhibernate.domain1.Employee1;
-import org.szczeprez.testhibernate.domain1.Employee2;
+ 
+ 
 import org.szczeprez.testhibernate.domain1.Employee3;
 
 public class Main {
 
 	public static void main(String[] args) {
+ 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("myDatabase");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
@@ -30,7 +27,7 @@ public class Main {
 		entityManager.persist(employee3);
 		entityManager.getTransaction().commit();
 		
-		entityManager.close();
+ 		entityManager.close();
 		entityManagerFactory.close();
 		
 		
